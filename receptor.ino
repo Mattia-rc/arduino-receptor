@@ -32,7 +32,7 @@ int minutos = 0;
 
 void activarContador() {
 
-    if (inicio == 1){
+   
       milisegundos = millis();
 
       if(milisegundos % 1 == 0){
@@ -73,7 +73,7 @@ void activarContador() {
   
 }
 
-}
+
 
 
 
