@@ -80,13 +80,13 @@ void activarContador() {
 
 
 
-  lcd.setCursor(4, 0);
+  lcd.setCursor(7, 0);
   if (minutos < 10)      {
     lcd.print("0");
   }
   lcd.print(minutos);
   lcd.print(":");
-  lcd.setCursor(7, 0);
+  lcd.setCursor(10, 0);
   if (segundos < 10)     {
     lcd.print("0");
   }
@@ -123,8 +123,8 @@ void activarContadorSeg() {
 
 
 
-  lcd.setCursor(3, 1);
-  lcd.setCursor(6, 1);
+  lcd.setCursor(4, 1);
+  lcd.setCursor(7, 1);
   if (segundosSeg < 10)     {
     lcd.print("0");
   }
@@ -150,12 +150,15 @@ void resetearTiempo() {
 
 void segmentos4(){
   cuentaSeg4++;
-  lcd.setCursor(4, 0);
+  lcd.setCursor(5, 0);
   lcd.print("S");
-  lcd.setCursor(4, 1);
+  lcd.setCursor(5, 1);
   lcd.print(cuentaSeg4);
-}
 
+  if(cuentaSeg4 == 4){
+    cuentaSeg4 = 0;
+  }
+}
 
 
 void puntosLocal() {
@@ -301,7 +304,7 @@ void loop() {
     else  if ((char)buf[0] == '8') // si el caracter es el numero 1
     {
 
-   segmentos4();
+    segmentos4();
 
     }
 
